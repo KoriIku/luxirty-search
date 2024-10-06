@@ -1,48 +1,150 @@
 <template>
-    <div class="results">
-      <div class="search-box">
-        <input v-model="query" @keyup.enter="search" placeholder="Search...">
-        <button @click="search">Search</button>
+  <div>
+    <div class="my-container">
+      <div class="search-container" id="searchContainer">
+        <h1 class="search-title">Luxirty search</h1>
+        <div class="gcse-searchbox"></div>
       </div>
-      <div class="gcse-searchresults-only"></div>
+      <div class="search-result-zone">
+        <div class="gcse-searchresults"></div>
+      </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        query: new URLSearchParams(window.location.search).get('q') || ''
-      };
-    },
-    mounted() {
-      const cx = 'd0753b9ad66c34097';
+
+    <footer>
+      <p>
+        &copy; made by <a href="https://your-website.com">Luxirty</a> |
+        <a href="https://github.com/your-username" target="_blank">
+          <img :src="githubIcon" alt="GitHub">
+          GitHub
+        </a>
+      </p>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SearchPage',
+  data() {
+    return {
+      githubIcon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23345a80' d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E"
+    };
+  },
+  mounted() {
+    this.loadGoogleCSE();
+    this.addTargetBlank();
+  },
+  methods: {
+    loadGoogleCSE() {
       const script = document.createElement('script');
-      script.src = `https://cse.google.com/cse.js?cx=${cx}`;
+      script.src = "https://cse.google.com/cse.js?cx=d0753b9ad66c34097";
       script.async = true;
-      document.body.appendChild(script);
+      document.head.appendChild(script);
     },
-    methods: {
-      search() {
-        this.$router.push(`/results?q=${encodeURIComponent(this.query)}`);
-      }
+    addTargetBlank() {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'childList') {
+            const links = document.querySelectorAll('.gs-title a.gs-title');
+            links.forEach((link) => {
+              link.setAttribute('target', '_blank');
+            });
+          }
+        });
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      });
     }
-  };
-  </script>
-  
-  <style>
-  .results {
-    padding: 20px;
   }
-  .search-box {
-    margin-bottom: 20px;
-  }
-  input {
-    width: 300px;
-    padding: 10px;
-    margin-right: 5px;
-  }
-  button {
-    padding: 10px;
-  }
-  </style>
+};
+</script>
+
+<style scoped>
+:root {
+  --fr-font-basefont: system-ui, -apple-system, BlinkMacSystemFont, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Mozilla', 'Twemoji Mozilla', 'Segoe UI Symbol', 'Noto Color Emoji Compat', emoji, 'Font Awesome 6 Pro', 'Font Awesome 5 Pro', FontAwesome, iconfont, icomoon, IcoFont, fontello, themify, 'Segoe Fluent Icons', 'Material Design Icons', bootstrap-icons;
+  --fr-font-family: 'Microsoft YaHei UI';
+  --fr-font-shadow: 0 0 0.75px #7c7c7cdd;
+  --fr-font-stroke: 0.015px currentcolor;
+  --uv-styles-color-surface: #ffffff;
+  --uv-styles-color-tertiary: #f8f9fa;
+  --uv-styles-color-secondary: #e9ecef;
+  --uv-styles-color-outline: #ced4da;
+  --uv-styles-color-primary: #007bff;
+  --uv-styles-color-text-primary: #007bff;
+  --uv-styles-color-text-emphasis: #212529;
+  --uv-styles-color-text-default: #495057;
+  --uv-styles-color-text-de-emphasis: #6c757d;
+  --uv-styles-color-visited-link: #551A8B;
+}
+
+body {
+  font-family: var(--fr-font-family), var(--fr-font-basefont);
+  background-color: var(--uv-styles-color-surface);
+  color: var(--uv-styles-color-text-default);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.my-container {
+  width: 100%;
+  max-width: var(--center-width);
+  min-width: 320px;
+  flex-grow: 1;
+  box-sizing: border-box;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 26px;
+  margin-left: 28px;
+}
+
+.search-title {
+  font-size: 24px;
+  color: #58636f;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #6c757d;
+  border-top: 1px solid #dee2e6;
+  margin-top: 36px;
+}
+
+footer a {
+  color: #345a80;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: #1c3d5a;
+  text-decoration: underline;
+}
+
+footer img {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  margin-right: 3px;
+  opacity: 0.8;
+}
+
+</style>

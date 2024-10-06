@@ -1,24 +1,15 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
+
 
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
-  padding: 3px;
 }
 
 @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+
 }
 
 @media (min-width: 1024px) {
@@ -29,6 +20,168 @@ a,
 
   #app {
     display: grid;
-    padding: 0 2rem;
+    width: 100%;
   }
+}
+
+.gsc-refinementsArea {
+  border-bottom: 1px solid var(--divider-color) !important;
+}
+
+
+.gcse-searchbox {
+  flex-grow: 1;
+}
+
+.search-divider {
+  height: 1px;
+  background-color: var(--uv-styles-color-outline);
+  margin: 20px 0;
+}
+
+/* 自定义 Google CSE 样式 */
+.gsc-control-cse {
+  font-family: inherit !important;
+  border: none !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+.gsc-input-box {
+  border: none !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.gsc-input-box .gsc-input,
+.gsc-input-box .gsc-input:focus {
+  background-color: transparent !important;
+  color: var(--uv-styles-color-text-default) !important;
+  font-size: 16px !important;
+}
+
+.gsc-search-button-v2 {
+  border-radius: 25px !important;
+  padding: 10px 20px !important;
+  background-color: var(--uv-styles-color-primary) !important;
+  border: none !important;
+}
+
+/* 修改搜索结果样式 */
+.gsc-result {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.gsc-results,
+.gsc-webResult {
+  background-color: transparent !important;
+  width: 652px !important;
+  margin-left: 218px;
+}
+
+.gs-webResult.gs-result a.gs-title:link, .gs-webResult.gs-result a.gs-title:link b, .gs-imageResult a.gs-title:link, .gs-imageResult a.gs-title:link b {
+  color: var(--title-color) !important;
+}
+
+.gs-title,
+.gs-title b {
+
+  font-family: var(--fr-font-family), var(--fr-font-basefont) !important;
+  text-shadow: var(--fr-font-shadow) !important;
+  -webkit-text-stroke: var(--fr-font-stroke) !important;
+  font-size: 22px !important;
+  line-height: 28px !important;
+  font-weight: 400 !important;
+  margin-bottom: 5px !important;
+  /* padding-top: 10px !important;
+  margin-top: 20px !important; */
+  text-rendering: optimizeLegibility !important;
+}
+
+/* 新增：设置已访问链接的样式 */
+.gs-title a.gs-title:visited,
+.gs-title a.gs-title:visited b {
+  color: var(--uv-styles-color-visited-link) !important;
+}
+
+.gs-snippet {
+  color: var(--uv-styles-color-text-default) !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 8px !important;
+}
+
+.gs-visibleUrl {
+  color: var(--uv-styles-color-text-de-emphasis) !important;
+  font-size: 14px !important;
+}
+
+.gsc-search-box.gsc-search-box-tools {
+  display: flex;
+  z-index: 3;
+  position: relative;
+  min-height: 44px;
+  border: 1px solid transparent;
+  background: #fff;
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, .16);
+  border-radius: 24px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 692px;
+  height: 46px;
+}
+
+/* 隐藏图片 */
+.gs-image-box {
+  display: none;
+}
+
+.gsc-above-wrapper-area {
+  /* border-bottom: 1px solid #e9e9e9; */
+  padding: 5px 0 0 0;
+  border: none !important;
+}
+
+.gsc-refinementBlock {
+  margin-left: 218px;
+}
+
+.gsc-above-wrapper-area-container {
+  width: 652px !important;
+  margin-left: 218px;
+}
+
+/* 自动补全框美化 */
+.gssb_a {
+  padding: 6px 12px !important;
+}
+
+/* 排序框美化 */
+.gsc-selected-option-container.gsc-inline-block {
+  background-color: transparent !important;
+  background-image: none;
+  border: none !important;
+  box-shadow: none;
+}
+
+.gs-per-result-labels {
+  display: none;
+}
+
+.gsc-refinementHeader {
+  background-color: transparent !important;
+}
+
+.gsc-cursor-page{
+  background-color: transparent !important;
+  color: var(--color-text);
+}
+
+.gsc-results .gsc-cursor-box {
+  margin: 5px;
 }

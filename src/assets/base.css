@@ -34,6 +34,23 @@
   --color-text: var(--vt-c-text-light-1);
 
   --section-gap: 160px;
+
+  --fr-font-basefont: system-ui, -apple-system, BlinkMacSystemFont, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Mozilla', 'Twemoji Mozilla', 'Segoe UI Symbol', 'Noto Color Emoji Compat', emoji, 'Font Awesome 6 Pro', 'Font Awesome 5 Pro', FontAwesome, iconfont, icomoon, IcoFont, fontello, themify, 'Segoe Fluent Icons', 'Material Design Icons', bootstrap-icons;
+  --fr-font-family: 'Microsoft YaHei UI';
+  --fr-font-shadow: 0 0 0.75px #7c7c7cdd;
+  --fr-font-stroke: 0.015px currentcolor;
+  --uv-styles-color-surface: #ffffff;
+  --uv-styles-color-tertiary: #f8f9fa;
+  --uv-styles-color-secondary: #e9ecef;
+  --uv-styles-color-outline: #ced4da;
+  --uv-styles-color-primary: #007bff;
+  --uv-styles-color-text-primary: #007bff;
+  --uv-styles-color-text-emphasis: #212529;
+  --uv-styles-color-text-default: #495057;
+  --uv-styles-color-text-de-emphasis: #6c757d;
+  --uv-styles-color-visited-link: #551A8B;
+
+  --divider-color: #dfe1e5;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,6 +64,14 @@
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --uv-styles-color-text-default: #B7C1C6;
+
+    --title-color: #99C3FF;
+    --link-color: #bdc1c6;
+    --uv-styles-color-visited-link: #c58af9;
+
+    --divider-color: #3f4145;
   }
 }
 
