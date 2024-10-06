@@ -63,35 +63,6 @@ export default {
 </script>
 
 <style scoped>
-:root {
-  --fr-font-basefont: system-ui, -apple-system, BlinkMacSystemFont, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', 'Android Emoji', 'EmojiSymbols', 'EmojiOne Mozilla', 'Twemoji Mozilla', 'Segoe UI Symbol', 'Noto Color Emoji Compat', emoji, 'Font Awesome 6 Pro', 'Font Awesome 5 Pro', FontAwesome, iconfont, icomoon, IcoFont, fontello, themify, 'Segoe Fluent Icons', 'Material Design Icons', bootstrap-icons;
-  --fr-font-family: 'Microsoft YaHei UI';
-  --fr-font-shadow: 0 0 0.75px #7c7c7cdd;
-  --fr-font-stroke: 0.015px currentcolor;
-  --uv-styles-color-surface: #ffffff;
-  --uv-styles-color-tertiary: #f8f9fa;
-  --uv-styles-color-secondary: #e9ecef;
-  --uv-styles-color-outline: #ced4da;
-  --uv-styles-color-primary: #007bff;
-  --uv-styles-color-text-primary: #007bff;
-  --uv-styles-color-text-emphasis: #212529;
-  --uv-styles-color-text-default: #495057;
-  --uv-styles-color-text-de-emphasis: #6c757d;
-  --uv-styles-color-visited-link: #551A8B;
-}
-
-body {
-  font-family: var(--fr-font-family), var(--fr-font-basefont);
-  background-color: var(--uv-styles-color-surface);
-  color: var(--uv-styles-color-text-default);
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-size: 16px;
-  line-height: 1.5;
-}
 
 .my-container {
   width: 100%;
