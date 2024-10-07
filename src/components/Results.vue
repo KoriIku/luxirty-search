@@ -1,20 +1,16 @@
 <template>
-  <div>
-    <div class="my-container">
-      <div class="search-container" id="searchContainer">
-        <h1 class="search-title">Luxirty search</h1>
-        <div class="gcse-searchbox"></div>
-      </div>
-      <div class="search-result-zone">
-        <div class="gcse-searchresults"></div>
-      </div>
+  <div class="my-container">
+    <div class="search-container" id="searchContainer">
+      <h1 class="search-title">Luxirty Search</h1>
+      <div class="gcse-searchbox"></div>
     </div>
-
+    <div class="search-result-zone">
+      <div class="gcse-searchresults"></div>
+    </div>
     <footer>
       <p>
-        &copy; made by <a href="https://your-website.com">Luxirty</a> |
+        &copy; Create by <a href="https://your-website.com">Luxirty</a> with love |
         <a href="https://github.com/your-username" target="_blank">
-          <img :src="githubIcon" alt="GitHub">
           GitHub
         </a>
       </p>
@@ -63,12 +59,14 @@ export default {
 </script>
 
 <style scoped>
-
 .my-container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* 让子元素垂直排列 */
+  min-height: 100vh;
+  /* 让容器占满整个视窗高度 */
   max-width: var(--center-width);
   min-width: 320px;
-  flex-grow: 1;
   box-sizing: border-box;
 }
 
@@ -78,6 +76,7 @@ export default {
   margin-bottom: 20px;
   margin-top: 26px;
   margin-left: 28px;
+  min-height: 48px;
 }
 
 .search-title {
@@ -85,6 +84,18 @@ export default {
   color: #58636f;
   margin-right: 20px;
   white-space: nowrap;
+}
+
+/* 黑暗模式样式 */
+@media (prefers-color-scheme: dark) {
+  .search-title {
+    color: #d1d5db; /* 黑暗模式下的颜色 */
+  }
+}
+
+.search-result-zone {
+  flex-grow: 1;
+  /* 让搜索结果区占据剩余空间 */
 }
 
 /* Footer styles */
@@ -102,7 +113,6 @@ footer a {
   color: #345a80;
   text-decoration: none;
   transition: color 0.3s ease;
-  margin: 0 5px;
 }
 
 footer a:hover {
@@ -118,4 +128,23 @@ footer img {
   opacity: 0.8;
 }
 
+@media (prefers-color-scheme: dark) {
+  footer {
+    background-color: #222222; /* 深色背景 */
+    color: #cccccc; /* 浅灰色字体，确保可读性 */
+    border-top: 1px solid #444444; /* 深色边框 */
+  }
+
+  footer a {
+    color: #80a0c2; /* 链接颜色改为浅色 */
+  }
+
+  footer a:hover {
+    color: #a0c3e0; /* 悬停时的链接颜色略微加亮 */
+  }
+
+  footer img {
+    opacity: 0.9; /* 提高图像的亮度，适应深色背景 */
+  }
+}
 </style>

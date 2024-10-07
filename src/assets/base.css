@@ -80,7 +80,6 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
 }
 
 body {
@@ -108,4 +107,20 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.root {
+  --center-abs-margin: 180px;
+}
+
+@media (min-width: 1124px) and (max-width: 1300px) {
+  .root {
+      --center-abs-margin: calc((100vw - 1068px) / 2);
+  }
+}
+
+@media (min-width: 1475px) and (max-width: 1675px) {
+  .root {
+      --center-abs-margin: calc(25vw + -188.75px);
+  }
 }
