@@ -33,6 +33,12 @@ Luxirty Search 直接通过配置Annotations让搜索引擎执教屏蔽垃圾网
 2. 代码相关信息的高质量来源：这些域名被视作优质来源，当点击“For Program”标签时优先级会被提高。
 3. 当然，如果你认为有必要添加新的标签也可以提出来。
 
+### 当前的缺陷
+1. 对不同尺寸的屏幕适配不完整
+
+2. 暗黑模式下还有部分元素过亮或者过暗 
+
+
 ## 原理
 
 Luxirty Search 基于 Google 的可编程自定义搜索引擎(Google cse)，允许通过 Annotations 自定义屏蔽网站及搜索范围等，同时使用 Refinement Labels 提高 Github 等优质来源的权重。
