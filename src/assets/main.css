@@ -127,6 +127,7 @@ a,
 
 /* 针对小屏幕的样式 */
 @media (max-width: 600px) {
+
   .gsc-results,
   .gsc-webResult {
     width: calc(100vw - 20px) !important;
@@ -185,8 +186,20 @@ a,
   border: none !important;
 }
 
+.gsc-refinementsArea {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--divider-color) !important;
+  border-radius: 0 !important;
+}
+
+.gsc-refinementsGradient {
+  display: none;
+}
+
 .gsc-refinementBlock {
   margin-left: 218px;
+  background-color: transparent !important;
 }
 
 .gsc-above-wrapper-area-container {
