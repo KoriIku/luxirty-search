@@ -1,6 +1,6 @@
 # Luxirty Search
 
-[search.luxirty.com]()
+[search.luxirty.com](search.luxirty.com)
 
 一个搜索引擎，基于 Google，屏蔽内容农场，无广告，干净，简洁，快。
 
@@ -52,7 +52,7 @@ Luxirty Search 基于 Google 的可编程自定义搜索引擎(Google cse)，允
 # 开发
 
 ## 参考资料
-唯一要看的参考资料就是这个：[https://developers.google.com/custom-search/docs/element]()
+唯一要看的参考资料就是这个：[https://developers.google.com/custom-search/docs/element](https://developers.google.com/custom-search/docs/element)
 
 ## 在本地调试
 
