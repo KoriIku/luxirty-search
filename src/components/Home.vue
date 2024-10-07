@@ -9,6 +9,16 @@
     <div class="search-container">
       <div class="gcse-searchbox-only" data-resultsUrl="search"></div>
     </div>
+    
+    <!-- 添加页脚 -->
+    <footer>
+      <p>
+        &copy; Create by <a href="https://github.com/KoriIku">Luxirty</a> with love |
+        <a href="https://github.com/KoriIku/luxiry-search" target="_blank">
+          GitHub
+        </a>
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -58,5 +68,24 @@ export default {
   text-decoration: none;
   font-size: 16px;
   color: var(--uv-styles-color-text-default);
+}
+
+/* 新增的页脚样式 */
+footer {
+  position: absolute;
+  bottom: 20px; /* 离底部20px */
+  text-align: center; /* 居中对齐 */
+  width: 100%; /* 宽度为100% */
+  font-size: 14px; /* 字体大小 */
+  color: var(--uv-styles-color-text-default); /* 使用与其他文本一致的颜色 */
+}
+
+footer a {
+  text-decoration: none; /* 去掉下划线 */
+  color: var(--uv-styles-color-text-default); /* 使用与其他文本一致的颜色 */
+}
+
+footer a:hover {
+  text-decoration: underline; /* 悬停时加下划线 */
 }
 </style>

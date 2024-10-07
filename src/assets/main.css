@@ -82,6 +82,13 @@ a,
   height: 46px;
 }
 
+/* 针对小屏幕的样式 */
+@media (max-width: 600px) {
+  .gsc-search-box.gsc-search-box-tools {
+    width: calc(100vw - 28px);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .gsc-search-box.gsc-search-box-tools {
     background: #333333;
@@ -116,6 +123,15 @@ a,
   background-color: transparent !important;
   width: 652px !important;
   margin-left: 218px;
+}
+
+/* 针对小屏幕的样式 */
+@media (max-width: 600px) {
+  .gsc-results,
+  .gsc-webResult {
+    width: calc(100vw - 20px) !important;
+    margin-left: 10px;
+  }
 }
 
 .gs-webResult.gs-result a.gs-title:link,
@@ -178,6 +194,13 @@ a,
   margin-left: 218px;
 }
 
+/* 针对小屏幕的样式 */
+@media (max-width: 600px) {
+  .gsc-refinementBlock {
+    margin-left: 5px;
+  }
+}
+
 /* 自动补全框美化 */
 .gssb_a {
   padding: 6px 12px !important;
@@ -213,43 +236,60 @@ a,
 
 /* 表格容器样式 */
 table.gsc-completion-container {
-  width: 601px; /* 保持原有宽度 */
-  position: absolute; /* 保持绝对定位 */
-  left: 203px; /* 保持原有左边距 */
-  top: 69px; /* 保持原有顶部距离 */
-  background-color: #ffffff; /* 默认背景色 */
-  border-radius: 4px; /* 边角圆润 */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  width: 601px;
+  /* 保持原有宽度 */
+  position: absolute;
+  /* 保持绝对定位 */
+  left: 203px;
+  /* 保持原有左边距 */
+  top: 69px;
+  /* 保持原有顶部距离 */
+  background-color: #ffffff;
+  /* 默认背景色 */
+  border-radius: 4px;
+  /* 边角圆润 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* 添加阴影效果 */
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加轻微阴影效果 */
-  border: 1px solid transparent; /* 设置透明边框，以避免默认边框影响 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* 添加轻微阴影效果 */
+  border: 1px solid transparent;
+  /* 设置透明边框，以避免默认边框影响 */
 }
 
 /* 单元格样式 */
 table.gsc-completion-container td {
-  padding: 12px; /* 内边距 */
-  transition: background-color 0.3s, color 0.3s; /* 背景和文字色变换效果 */
+  padding: 12px;
+  /* 内边距 */
+  transition: background-color 0.3s, color 0.3s;
+  /* 背景和文字色变换效果 */
 }
 
 /* 字体样式 */
 table.gsc-completion-container span {
-  color: #333; /* 默认文字颜色 */
-  font-size: 16px; /* 字体大小 */
+  color: #333;
+  /* 默认文字颜色 */
+  font-size: 16px;
+  /* 字体大小 */
 }
 
 /* 黑暗模式样式 */
 @media (prefers-color-scheme: dark) {
   table.gsc-completion-container {
-      background-color: #1e1e1e; /* 黑暗模式背景色 */
+    background-color: #1e1e1e;
+    /* 黑暗模式背景色 */
   }
 
-  table.gsc-completion-container td { 
-      background-color: #1e1e1e; /* 黑暗模式单元格背景色 */
-      color: #f0f0f0; /* 黑暗模式文字色 */
+  table.gsc-completion-container td {
+    background-color: #1e1e1e;
+    /* 黑暗模式单元格背景色 */
+    color: #f0f0f0;
+    /* 黑暗模式文字色 */
   }
 
   table.gsc-completion-container span {
-      color: #f0f0f0; /* 黑暗模式文字色 */
+    color: #f0f0f0;
+    /* 黑暗模式文字色 */
   }
 }
 
