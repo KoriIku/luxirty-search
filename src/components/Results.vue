@@ -9,7 +9,7 @@
     </div>
     <footer>
       <p>
-        &copy; Create by <a href="https://github.com/KoriIku">Luxirty</a> with love |
+        &copy; Create by <a href="https://github.com/KoriIku">Luxirty</a> with &hearts; |
         <a href="https://github.com/KoriIku/luxiry-search" target="_blank">
           GitHub
         </a>
@@ -27,7 +27,7 @@ export default {
   methods: {
     loadGoogleCSE() {
       const script = document.createElement('script');
-      script.src = "https://cse.google.com/cse.js?cx=d0753b9ad66c34097";
+      script.src = `https://cse.google.com/cse.js?cx=${import.meta.env.VITE_GOOGLE_CSE_CX}`;
       script.async = true;
       document.head.appendChild(script);
     },

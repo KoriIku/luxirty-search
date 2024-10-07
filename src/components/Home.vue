@@ -25,9 +25,8 @@
 <script>
 export default {
   mounted() {
-    const cx = 'd0753b9ad66c34097';
     const script = document.createElement('script');
-    script.src = `https://cse.google.com/cse.js?cx=${cx}`;
+    script.src = `https://cse.google.com/cse.js?cx=${import.meta.env.VITE_GOOGLE_CSE_CX}`;
     script.async = true;
     document.body.appendChild(script);
   }
