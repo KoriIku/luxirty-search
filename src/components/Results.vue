@@ -1,7 +1,7 @@
 <template>
   <div class="my-container">
     <div class="search-container" id="searchContainer">
-      <h1 class="search-title">Luxirty Search</h1>
+      <h1 class="search-title" @click="goHome">Luxirty Search</h1>
       <div class="gcse-searchbox"></div>
     </div>
     <div class="search-result-zone">
@@ -31,6 +31,10 @@ export default {
       script.async = true;
       document.head.appendChild(script);
     },
+    goHome() {
+      // 使用 window.location.href 跳转到根路径
+      window.location.href = '/';
+    }
   }
 };
 </script>
@@ -61,6 +65,7 @@ export default {
   color: #58636f;
   margin-right: 20px;
   white-space: nowrap;
+  user-select: none;  /* 防止标题文字被选中 */
 }
 
 /* 针对小屏幕的样式 */
