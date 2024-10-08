@@ -70,6 +70,7 @@ Luxirty Search 基于 Google 的可编程自定义搜索引擎(Google cse)，允
 ## 一键部署(推荐)
 ### Deploy with Vercel
 (搜索页404的问题已修复)
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKoriIku%2Fluxiry-search&project-name=luxirty-search&repository-name=luxirty-search)
 
 ### Deploy to Netlify
