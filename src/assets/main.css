@@ -146,7 +146,6 @@ a,
 .gs-title b {
 
   font-family: var(--fr-font-family), var(--fr-font-basefont) !important;
-  text-shadow: var(--fr-font-shadow) !important;
   -webkit-text-stroke: var(--fr-font-stroke) !important;
   font-size: 1.35rem !important;
   line-height: 28px !important;

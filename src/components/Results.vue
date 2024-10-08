@@ -9,7 +9,7 @@
     </div>
     <footer>
       <p>
-        &copy; Create by <a href="https://github.com/KoriIku">Luxirty</a> with &hearts; |
+        &copy; Create by <a href="https://luxirty.com/posts/luxirty-search/">Luxirty</a> with &hearts; |
         <a href="https://github.com/KoriIku/luxiry-search" target="_blank">
           GitHub
         </a>

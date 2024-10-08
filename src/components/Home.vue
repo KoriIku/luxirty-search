@@ -13,7 +13,7 @@
     <!-- 添加页脚 -->
     <footer>
       <p>
-        &copy; Create by <a href="https://github.com/KoriIku">Luxirty</a> with love |
+        &copy; Create by <a href="https://luxirty.com/posts/luxirty-search/">Luxirty</a> with love |
         <a href="https://github.com/KoriIku/luxiry-search" target="_blank">
           GitHub
         </a>
