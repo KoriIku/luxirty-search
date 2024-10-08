@@ -23,6 +23,7 @@ export default {
   name: 'SearchPage',
   mounted() {
     this.loadGoogleCSE();
+    this.setupResultsRenderedCallback();  // 注册渲染结果回调函数
   },
   methods: {
     loadGoogleCSE() {
@@ -34,11 +35,30 @@ export default {
     goHome() {
       // 使用 window.location.href 跳转到根路径
       window.location.href = '/';
+    },
+    setupResultsRenderedCallback() {
+      // 定义一个渲染回调函数，用于移除不需要的属性
+      const myWebResultsRenderedCallback = () => {
+        const links = document.querySelectorAll('a.gs-title');
+        
+        links.forEach((anchor) => {
+          // 移除 'data-cturl' 和 'data-ctorig' 属性
+          anchor.removeAttribute('data-cturl');
+          anchor.removeAttribute('data-ctorig');
+        });
+      };
+
+      // 将回调注册到 Google Custom Search 引擎对象
+      window.__gcse || (window.__gcse = {});
+      window.__gcse.searchCallbacks = {
+        web: {
+          rendered: myWebResultsRenderedCallback,
+        },
+      };
     }
   }
 };
 </script>
-
 <style scoped>
 .my-container {
   display: flex;
