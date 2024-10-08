@@ -1,6 +1,6 @@
 # Luxirty Search
 
-[search.luxirty.com](search.luxirty.com)
+[search.luxirty.com](https://search.luxirty.com)
 
 一个搜索引擎，基于 Google，屏蔽内容农场，无广告，无跟踪，干净，简洁，快。
 
