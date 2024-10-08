@@ -49,7 +49,7 @@ Luxirty Search 基于 Google 的可编程自定义搜索引擎(Google cse)，允
 
 本质上而言，这是一个 vue3 + vite 纯前端项目，因此你应该可以方便地将它部署到任何你喜欢的托管网站，例如 GitHub Pages、netfliy、Cloudflare Pages、vercel之类的。
 
-如果你想使用自己的cse，只需设置环境变量 `VITE_GOOGLE_CSE_CX` 即可。
+(可选)如果你想使用自己的cse，只需设置环境变量 `VITE_GOOGLE_CSE_CX` 即可，从这里创建你的 cse 并获取 cx： https://programmablesearchengine.google.com/about/。
 
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKoriIku%2Fluxiry-search&project-name=luxirty-search&repository-name=luxirty-search)
