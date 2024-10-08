@@ -60,6 +60,7 @@ Luxirty Search 基于 Google 的可编程自定义搜索引擎(Google cse)，允
 (可选)如果你想使用自己的cse，只需设置环境变量 `VITE_GOOGLE_CSE_CX` ，从这里创建你的 cse 并获取 cx： https://programmablesearchengine.google.com/about/。
 
 ## 一键部署
+目前好像会出现使用 vercel 部署后，搜索出现 404: NOT_FOUND 的问题，等修。（实话说我也不太懂怎么修，大佬救救。）
 ### Deploy with Vercel
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKoriIku%2Fluxiry-search&project-name=luxirty-search&repository-name=luxirty-search)
 
