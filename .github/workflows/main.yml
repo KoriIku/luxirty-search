@@ -21,7 +21,6 @@ jobs:
           node-version: 20
           cache: 'pnpm'
       - run: pnpm install && pnpm build
-      - uses: actions/checkout@v4
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}"
       - name: Log in to registry
