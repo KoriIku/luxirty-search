@@ -65,7 +65,7 @@ Luxirty Search 基于 Google 的可编程自定义搜索引擎(Google cse)，允
 
 无论你喜欢哪种方式，都只需要查看 vite 部署教程: https://cn.vitejs.dev/guide/static-deploy
 
-(可选)如果你想使用自己的cse，只需设置环境变量 `VITE_GOOGLE_CSE_CX` ，从这里创建你的 cse 并获取 cx： https://programmablesearchengine.google.com/about/。
+(可选)如果你想使用自己的cse，只需设置环境变量 `VITE_GOOGLE_CSE_CX` ，从这里创建你的 cse 并获取 cx： https://programmablesearchengine.google.com/about/
 
 ## 一键部署(推荐)
 ### Deploy with Vercel
