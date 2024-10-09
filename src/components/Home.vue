@@ -57,6 +57,17 @@ export default {
   justify-content: center;
 }
 
+/* 针对小屏幕的样式 */
+@media (max-width: 600px) {
+  .logo {
+    font-size: 35px;
+    top: 37vh; /* 从 30vh 增加到 35vh */
+  }
+  .search-container {
+    top: calc(37vh + 80px);
+  }
+}
+
 .about {
   position: absolute;
   top: 20px;
