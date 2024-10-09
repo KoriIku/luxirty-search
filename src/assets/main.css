@@ -211,6 +211,11 @@ a,
   .gsc-refinementBlock {
     margin-left: 5px;
   }
+
+  .gsc-above-wrapper-area-container {
+    width: auto !important;
+    margin-left: 5px;
+  }
 }
 
 /* 自动补全框美化 */
