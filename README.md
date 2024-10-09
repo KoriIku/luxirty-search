@@ -85,7 +85,7 @@ Luxirty Search 基于 Google 的可编程自定义搜索引擎(Google cse)，允
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/KoriIku/luxirty-search)
 
 ### Docker 运行 （感谢 @shadowofmoo）
-`docker run --rm  -p 80:80  ghcr.io/shadowofmoo/luxirty-search`
+`docker run --rm  -p 80:80  ghcr.io/koriiku/luxirty-search`
 
 # 开发
 
