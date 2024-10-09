@@ -32,6 +32,10 @@ export default {
       script.async = true;
       document.head.appendChild(script);
     },
+    setTitle() {
+      var inputContent = document.getElementsByName('search')[0].value;
+      document.title = inputContent + ' - Luxirty Search'
+    },
     goHome() {
       // 使用 window.location.href 跳转到根路径
       window.location.href = '/';
@@ -46,6 +50,9 @@ export default {
           anchor.removeAttribute('data-cturl');
           anchor.removeAttribute('data-ctorig');
         });
+
+        // 设置搜索标题，多页签时更好切换
+        this.setTitle();
       };
 
       // 将回调注册到 Google Custom Search 引擎对象
