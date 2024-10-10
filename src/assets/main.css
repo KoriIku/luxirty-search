@@ -66,6 +66,10 @@ a,
   border: none !important;
 }
 
+.gsc-search-button-v2:hover {
+  cursor: pointer !important;
+}
+
 .gsc-search-box.gsc-search-box-tools {
   display: flex;
   z-index: 3;
@@ -80,6 +84,13 @@ a,
   padding-right: 12px;
   width: 692px;
   height: 46px;
+}
+
+.gsc-search-box-tools:hover {
+  background: #fff;
+  box-shadow: 0 2px 8px 1px rgba(64, 60, 67, .24);
+  border-color: transparent;
+  border-radius: 24px;
 }
 
 /* 针对小屏幕的样式 */
@@ -157,7 +168,8 @@ a,
 }
 
 .gs-title:hover {
-  text-decoration: underline !important; /* 鼠标悬停时显示下划线 */
+  text-decoration: underline !important;
+  /* 鼠标悬停时显示下划线 */
 }
 
 /* 新增：设置已访问链接的样式 */
