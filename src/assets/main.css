@@ -156,6 +156,10 @@ a,
   text-rendering: optimizeLegibility !important;
 }
 
+.gs-title:hover {
+  text-decoration: underline !important; /* 鼠标悬停时显示下划线 */
+}
+
 /* 新增：设置已访问链接的样式 */
 .gs-title a.gs-title:visited,
 .gs-title a.gs-title:visited b {
