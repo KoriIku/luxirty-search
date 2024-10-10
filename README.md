@@ -73,7 +73,9 @@ Luxirty Search 基于 Google 的可编程自定义搜索引擎(Google cse)，允
 
 (可选)如果你想使用自己的cse，只需设置环境变量 `VITE_GOOGLE_CSE_CX` ，从这里创建你的 cse 并获取 cx： https://programmablesearchengine.google.com/about/
 
-注意：如果你使用自己创建的 cse，那么的部署看起来会有区别，页面上的“For Program”等标签是通过 cse 的 “优化” 功能配置的。你需要先添加域名，然后添加对应标签，并在标签中选中想提升的域名。
+注意：
+1. 如果你使用自己创建的 cse，那么的部署看起来会有区别，页面上的“For Program”等标签是通过 cse 的 “优化” 功能配置的。你需要先添加域名，然后添加对应标签，并在标签中选中想提升的域名。
+2. 你还需要修改 opensearch.xml 中的域名，详细请看 https://github.com/KoriIku/luxirty-search/issues/14
 
 ## 一键部署(推荐)
 ### Deploy with Vercel
