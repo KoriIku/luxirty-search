@@ -24,10 +24,10 @@ pnpm-debug.log*
 dist
 dist-ssr
 
-# Local env files
-.env
-.env.*
-!.env.example
+# # Local env files
+# .env
+# .env.*
+# !.env.example
 
 # Testing
 coverage
