@@ -327,3 +327,13 @@ table.gsc-completion-container span {
 a.gsst_a {
   display: none;
 }
+
+.gsc-result a.gs-title {
+  text-decoration: none !important;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.2s ease-in-out;
+}
+
+.gsc-result .gs-title:hover {
+  border-bottom-color: currentColor;
+}
