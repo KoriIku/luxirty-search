@@ -21,9 +21,13 @@
 <script>
 export default {
   name: 'SearchPage',
+  props: ['query'],
   mounted() {
     this.loadGoogleCSE();
     this.setupResultsRenderedCallback();  // 注册渲染结果回调函数
+    if (!this.query) {
+      history.back();
+    }
   },
   methods: {
     loadGoogleCSE() {
