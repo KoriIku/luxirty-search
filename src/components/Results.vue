@@ -26,7 +26,7 @@ export default {
     this.loadGoogleCSE();
     this.setupResultsRenderedCallback();  // 注册渲染结果回调函数
     if (!this.query) {
-      history.back();
+      this.goHome();
     }
   },
   methods: {
@@ -48,7 +48,7 @@ export default {
       // 定义一个渲染回调函数，用于移除不需要的属性
       const myWebResultsRenderedCallback = () => {
         const links = document.querySelectorAll('a.gs-title');
-        
+
         links.forEach((anchor) => {
           // 移除 'data-cturl' 和 'data-ctorig' 属性
           anchor.removeAttribute('data-cturl');
@@ -96,7 +96,8 @@ export default {
   color: #58636f;
   margin-right: 20px;
   white-space: nowrap;
-  user-select: none;  /* 防止标题文字被选中 */
+  user-select: none;
+  /* 防止标题文字被选中 */
 }
 
 /* 针对小屏幕的样式 */
