@@ -117,6 +117,16 @@ pnpm build
 
 
 # 更新记录
-- 加快了启动速度 - 现在超级快
+- 加快了启动速度
 - 添加了移除搜索结果中的跟踪链接 data-ct*
 - 移除了文字阴影
+
+## Star History
+
+<a href="https://star-history.com/#KoriIku/luxirty-search&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=KoriIku/luxirty-search&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=KoriIku/luxirty-search&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=KoriIku/luxirty-search&type=Date" />
+ </picture>
+</a>
